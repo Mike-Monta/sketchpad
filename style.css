@@ -3,6 +3,7 @@ body{
     display: flex;
     margin: 10px;
     padding: 20px;
+    background-color: rgb(178, 184, 189);
 }
 .main{
     border: 1px solid black;
@@ -47,7 +48,7 @@ body{
 }
 
 .cell{
-    border: 1px solid black;
+    border: 0.5px transparent grey;
     border-radius: 2px;
     flex-grow: 1;   
 }

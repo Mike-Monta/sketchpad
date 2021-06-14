@@ -2,7 +2,7 @@ function addRows(){
     const cellsNum = document.getElementById('cellsNum');
     n= cellsNum.value;
     console.log(n);
-    if (n>90) return alert("Numbers only lower than 90 please")
+    if (n>64) return alert("Numbers only lower than 65 please")
     removeChilds(container);
     for(r=0; r<n; r++){
     const newRow= document.createElement('div');
@@ -15,9 +15,9 @@ function addRows(){
     const cells = document.querySelectorAll('.cell');
     cells.forEach((cell) =>{
         cell.addEventListener('mouseover',() =>{
-            //changeColor();
-            //cell.setAttribute('background-color','blue');
-            cell.style.backgroundColor = "blue";
+            const randomColor = "#"+Math.floor(Math.random()*2**24).toString(16).padStart(6,"0");
+        
+            cell.style.backgroundColor = randomColor;
         })
     })
     clrBtn.addEventListener('click',() =>{
