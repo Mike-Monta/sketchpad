@@ -1,17 +1,31 @@
-
-function addDivBox(n){
-  
-  
-}
-
-function addRows(n){
+function addRows(){
+    const cellsNum = document.getElementById('cellsNum');
+    n= cellsNum.value;
+    console.log(n);
+    if (n>90) return alert("Numbers only lower than 90 please")
+    removeChilds(container);
     for(r=0; r<n; r++){
     const newRow= document.createElement('div');
     newRow.classList= "row";
     newRow.setAttribute('id',"row"+r);
     container.append(newRow);
     addColumns(n);
+   
     }
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach((cell) =>{
+        cell.addEventListener('mouseover',() =>{
+            //changeColor();
+            //cell.setAttribute('background-color','blue');
+            cell.style.backgroundColor = "blue";
+        })
+    })
+    clrBtn.addEventListener('click',() =>{
+        cells.forEach((cell) => {
+            cell.style.backgroundColor= "white";
+       })
+    })
+    
 }
 
 function addColumns(n){
@@ -26,6 +40,12 @@ function addColumns(n){
     }
 }
 
+const removeChilds = (parent) => {
+    while(parent.lastChild){
+        parent.removeChild(parent.lastChild);
+    }
+}
+
 function clearCells(){
   // clrBtn.addEventListener('click',() =>{
     cells.forEach((cell) => {
@@ -34,29 +54,15 @@ function clearCells(){
 }
 
 
+const input= document.querySelector('#cellsNum');
+
 
 const container = document.querySelector('#container');
 let r= 0;
 let c= 0;
-addRows(16);
+
 
 const clrBtn = document.querySelector('#clear');
 const cells = document.querySelectorAll('.cell');
 
 
-cells.forEach((cell) =>{
-    cell.addEventListener('mouseover',() =>{
-        //changeColor();
-        //cell.setAttribute('background-color','blue');
-        cell.style.backgroundColor = "blue";
-    })
-    
-
-    }
-)
-clrBtn.addEventListener('click',() =>{
-    cells.forEach((cell) => {
-        cell.style.backgroundColor= "white";
-   })
-}
-)
