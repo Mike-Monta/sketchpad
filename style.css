@@ -1,0 +1,58 @@
+body{
+    font-family: 'Baloo Tammudu 2', cursive;
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+}
+.main{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 50px;
+    
+}
+
+#menu{
+    width: 12%;
+    height: max-content;
+    margin-left: 10%;
+    position: relative;
+    border: 1px solid black;
+    padding: 10px;
+    
+}
+.menuBox{
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+#container{
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    left: 30%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+ 
+}
+.row{
+    
+    
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.cell{
+    
+    border: 1px solid black;
+    border-radius: 2px;
+    flex-grow: 1;
+    
+}
+
